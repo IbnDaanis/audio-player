@@ -20,4 +20,8 @@ h5 {
   color: rgb(100, 100, 100)
 }
 
+.no-pointer {
+  pointer-events: none;
+}
+
 @import "./song", "./player", "./library", "./nav"

@@ -1,9 +1,12 @@
-export const playAudio = async (isPlaying, audioRef) => {
+export const playAudio = (isPlaying, audioRef) => {
   if (isPlaying) {
-    const playPromise = await audioRef.current.play()
+    const playPromise = audioRef.current.play()
     if (playPromise !== undefined) {
-      playPromise.then((audio) => {
+      playPromise.then(_ => {
         audioRef.current.play()
+      }).catch(error => {
+        audioRef.current.pause()
+        console.log(error)
       })
     }
   }

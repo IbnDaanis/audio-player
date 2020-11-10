@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faAngleLeft, faAngleRight, faPause, } from '@fortawesome/free-solid-svg-icons'
 import { playAudio } from '../utils'
@@ -17,6 +17,10 @@ export const Player = ({ currentSong, setCurrentSong, isPlaying, setIsPlaying, a
       }
     })
     setSongs(newSongs)
+    document.body.classList.add('no-pointer')
+    setTimeout(() => {
+      document.body.classList.remove('no-pointer')
+    }, 400)
   }, [currentSong])
 
   const playSongHandler = () => {
@@ -51,6 +55,8 @@ export const Player = ({ currentSong, setCurrentSong, isPlaying, setIsPlaying, a
     }
     playAudio(isPlaying, audioRef)
   }
+
+
   return (
     <div className='player'>
       <div className="time-control">
