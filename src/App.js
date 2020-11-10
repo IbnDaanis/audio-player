@@ -38,7 +38,7 @@ export const App = () => {
   }
 
   return (
-    <div>
+    <div className={`app ${libraryStatus && 'library-active'}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song
         currentSong={currentSong}
