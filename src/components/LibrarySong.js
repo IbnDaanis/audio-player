@@ -16,7 +16,6 @@ export const LibrarySong = ({ song, songs, setSongs, setCurrentSong, audioRef, i
 
     setSongs(newSongs)
 
-
     if (isPlaying) {
       const playPromise = audioRef.current.play()
       if (playPromise !== undefined) {
