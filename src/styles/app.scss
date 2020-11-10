@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h1,
@@ -13,4 +13,10 @@ h3 {
   color: rgb(54, 54, 54);
 }
 
-@import "./song", "./player"
+h3,
+h4 {
+  font-weight: 400;
+  color: rgb(100, 100, 100)
+}
+
+@import "./song", "./player", "./library"
