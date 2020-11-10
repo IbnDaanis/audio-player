@@ -1,7 +1,6 @@
-import { playAudio } from '../utils'
 export const LibrarySong = ({ song, songs, setSongs, setCurrentSong, audioRef, isPlaying, id }) => {
-  const songSelectHandler = () => {
-    setCurrentSong(song)
+  const songSelectHandler = async () => {
+    await setCurrentSong(song)
 
     const newSongs = songs.map(song => {
       if (song.id === id) {
@@ -15,7 +14,7 @@ export const LibrarySong = ({ song, songs, setSongs, setCurrentSong, audioRef, i
       }
     })
     setSongs(newSongs)
-    playAudio(isPlaying, audioRef)
+    isPlaying && audioRef.current.play()
   }
   return (
     <div onClick={songSelectHandler} className={`library-song ${song.active && 'selected'}`} >
