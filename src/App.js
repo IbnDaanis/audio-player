@@ -39,6 +39,7 @@ export const App = () => {
       />
       <Library
         songs={songs}
+        setSongs={setSongs}
         setCurrentSong={setCurrentSong}
         audioRef={audioRef}
         isPlaying={isPlaying}

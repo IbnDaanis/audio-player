@@ -1,6 +1,6 @@
 import { LibrarySong } from "./LibrarySong"
 
-export const Library = ({ songs, setCurrentSong, audioRef, isPlaying }) => {
+export const Library = ({ songs, setCurrentSong, audioRef, isPlaying, setSongs }) => {
   return (
     <div className='library'>
       <h2>Library</h2>
@@ -8,6 +8,7 @@ export const Library = ({ songs, setCurrentSong, audioRef, isPlaying }) => {
         {songs.map(song => (
           <LibrarySong
             songs={songs}
+            setSongs={setSongs}
             song={song}
             key={song.id}
             id={song.id}
