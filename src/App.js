@@ -12,7 +12,7 @@ export const App = () => {
     <div>
       <Song currentSong={currentSong} />
       <Player isPlaying={isPlaying} setIsPlaying={setIsPlaying} currentSong={currentSong} />
-      <Library songs={songs} currentSong={currentSong} />
+      <Library songs={songs} setCurrentSong={setCurrentSong} />
     </div>
   )
 }
