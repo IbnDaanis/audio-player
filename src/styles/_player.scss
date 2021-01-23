@@ -8,7 +8,8 @@
 }
 
 .time-control {
-  width: 50%;
+  width: 400px;
+  max-width: 50%;
   display: flex;
   align-items: center;
 
@@ -36,17 +37,17 @@
   }
 }
 
-input[type="range"]:focus {
+input[type='range']:focus {
   outline: none;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 16px;
   width: 16px;
 }
 
-input[type="range"]::-moz-slider-thumb {
+input[type='range']::-moz-slider-thumb {
   -webkit-appearance: none;
   background: transparent;
   border: none;
@@ -72,7 +73,6 @@ input[type="range"]::-moz-slider-thumb {
   pointer-events: none;
   animation: 0.1s all ease-in-out;
 }
-
 
 @media screen and (max-width: 768px) {
   .time-control {

@@ -17,7 +17,7 @@ h3,
 h4,
 h5 {
   font-weight: 400;
-  color: rgb(100, 100, 100)
+  color: rgb(100, 100, 100);
 }
 
 .no-pointer {
@@ -29,7 +29,7 @@ h5 {
 }
 
 .library-active {
-  margin-left: 30%;
+  margin-left: 10%;
 }
 
-@import "./song", "./player", "./library", "./nav"
+@import './song', './player', './library', './nav';
